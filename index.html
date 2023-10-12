@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/14f49105d9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="head">
+            <h2>Danki.Code</h2>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#"><i class="fa-solid fa-clipboard-list"></i>Painel</a></li>
+                <li><a href="#"><i class="fa-sharp fa-solid fa-copy"></i>Conteúdo</a></li>
+                <li><a href="#"><i class="fa-solid fa-chart-simple"></i>Estatísticas</a></li>
+                <li><a href="#"><i class="fa-sharp fa-solid fa-gear"></i>Configurações</a></li>
+                <li><a href="#"><i class="fa-sharp fa-solid fa-question"></i>Dúvidas</a></li>
+                <li><a href="#"><i class="fa-sharp fa-solid fa-user-large"></i>Usuário</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-content">
+        <header>
+            <div class="nome-usuario">
+                <h2></h2>
+            </div>
+            <div class="search-bar">
+                <div class="icone-pesquisa"><i class="fa-solid fa-magnifying-glass"></i></div><form><input type="text"/></form>
+            </div>
+            <div class="notifications">
+                <p>2</p>
+                <i class="fa-solid fa-bell"></i>
+            </div>
+            <div class="clear"></div>
+        </header>
+        <article>
+            <div class="panel">
+                <h2>Bem vindo, Usuário!</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis voluptas, doloribus ipsam nisi dolorem vel velit reprehenderit. Eligendi omnis beatae praesentium minus enim placeat saepe, aut, voluptas perferendis quasi ipsa?</p>
+            </div>
+            <div class="panel" style="width: 49%;">
+                <h2>Bem vindo, Usuário!</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis voluptas, doloribus ipsam nisi dolorem vel velit reprehenderit. Eligendi omnis beatae praesentium minus enim placeat saepe, aut, voluptas perferendis quasi ipsa?</p>
+            </div>
+            <div class="panel" style="width: 49%; margin-left: 2%;">
+                <h2>Bem vindo, Usuário!</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis voluptas, doloribus ipsam nisi dolorem vel velit reprehenderit. Eligendi omnis beatae praesentium minus enim placeat saepe, aut, voluptas perferendis quasi ipsa?</p>
+            </div>
+            <div class="panel">
+                <h2>Bem vindo, Usuário!</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis voluptas, doloribus ipsam nisi dolorem vel velit reprehenderit. Eligendi omnis beatae praesentium minus enim placeat saepe, aut, voluptas perferendis quasi ipsa?</p>
+            </div>
+        </article>
+        <aside>
+            <div class="atividades-topo">
+                <h2>Últimas atividades:</h2>
+            </div>
+            <br />
+            <div class="atividades-registro">
+                <div class="circle"></div>
+                <h2>Há 28 minutos</h2>
+                <p>Uma nova <b>página</b> foi inserida.</p>
+            </div>
+            <div class="atividades-registro">
+                <div class="circle"></div>
+                <h2>Há 28 minutos</h2>
+                <p>Uma nova <b>página</b> foi inserida.</p>
+            </div>
+            <div class="atividades-registro">
+                <div class="circle"></div>
+                <h2>Há 28 minutos</h2>
+                <p>Uma nova <b>página</b> foi inserida.</p>
+            </div>
+        </aside>
+    </div>
+    <div class="clear"></div>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script> 
+        $(function(){
+            $(window).resize(function(){
+            var windowWidth = $(window)[0].innerWidth;
+            if(windowWidth <= 1000){
+                console.log("entrou")
+                $("div.nome-usuario h2").html('<i class="fa-solid fa-bars"></i>');
+                $("div.nome-usuario h2").click(function(){
+                    var elemento = $("div.sidebar");
+                    if(elemento.is(":visible")){
+                        elemento.hide();
+                        $("div.main-content").css("left", "0");
+                    }else{
+                        elemento.show();
+                        $("div.main-content").css("left", "300px"); 
+                    }
+                })
+            }else{
+                console.log("saiu")
+                $("div.nome-usuario h2").html("Olá, Usuário!");
+            }
+        })
+        })
+    </script>
+</body>
+</html>

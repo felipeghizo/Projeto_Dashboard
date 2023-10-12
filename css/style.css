@@ -1,0 +1,227 @@
+:root{
+    --BGCB: #FAF9FC;
+    --BGCSide: #2D3035;
+    --BGCSideDarker: #26282D;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+html, body{
+    height: 100%;
+    background-color: var(--BGCB);
+}
+div.clear{clear: both;}
+
+/* Body SideBar */
+body div.sidebar{
+    width: 300px;
+    height: 100%;
+    background-color: var(--BGCSide);
+    float: left;
+}
+body div.sidebar div.head{
+    text-align: center;
+    padding: 25px 10px;
+    background-color: var(--BGCSideDarker);
+    color: rgb(255, 255, 255);
+}
+body div.sidebar div.menu{
+    padding-top: 30px;
+    padding-left: 35px;
+}
+body div.sidebar div.menu ul{
+    list-style: none;
+}
+body div.sidebar div.menu ul li{
+    margin-top: 40px;
+}
+body div.sidebar div.menu ul li a{
+    text-decoration: none;
+    color: #717171;
+    transition: 0.5s;
+}
+body div.sidebar div.menu ul li a i{
+    color: #717171;
+    font-size: 22px;
+    width: 25px;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+body div.sidebar div.menu ul li:hover a{color: white;}
+body div.sidebar div.menu ul li:hover a i{color: #6D3BB8;}
+
+/* Body Main-Content */
+body div.main-content{
+    float: left;
+    width: calc(100% - 300px);
+    height: 100%;
+}
+body div.main-content header{
+    background-color: white;
+    height: 79px;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+body div.main-content header div.search-bar{
+    float: right;
+}
+body div.main-content header div.search-bar form{
+    display: inline-block;
+}
+body div.main-content header div.search-bar form input[type=text]{
+    width: 200px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-left: 0;
+    padding-left: 10px;
+    font-size: 16px;
+    position: relative;
+    color: black;
+    top: 5px;
+}
+body div.main-content header div.search-bar form input[type=text]:focus{
+    outline: 0;
+}
+body div.main-content header div.search-bar div.icone-pesquisa{
+    text-align: center;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    color:white;
+    background-color: #D6D6D6;
+    margin-top: 20px;
+    cursor: pointer; 
+}
+body div.main-content header div.search-bar div.icone-pesquisa i{
+    position: relative;
+    top:6px;
+}
+body div.main-content header div.notifications{
+    float: right;
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+    text-align: center;
+    background-color: #D6D6D6;
+    position: relative;
+    cursor: pointer;
+}
+body div.main-content header div.notifications p{
+    position: absolute;
+    top: -5px;
+    left: 22px;
+    width: 14px;
+    height: 14px;
+    background-color: #969ba5;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 12px;
+}
+body div.main-content header div.notifications i{
+    position: relative;
+    top: 6px;
+}
+
+body div.main-content header div.nome-usuario{
+    float: left;
+    margin-left: 15px;
+    margin-top: 30px;
+}
+body div.main-content header div.nome-usuario h2{
+    font-size: 25px;
+    font-weight: normal;
+    color: #A7A7A7;
+    cursor: pointer;
+}
+
+/* Article */
+body div.main-content article{
+    float: left;
+    width: 75%;
+    padding: 30px;
+    height: calc(100% - 79px);
+    overflow-y: auto; 
+}
+body div.main-content article div.panel{
+    width: 100%;
+    float: left;
+    border: 1px solid #ccc;
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 12px;
+}
+body div.main-content article div.panel h2{
+    color: #7F7F7F;
+    font-size: 22px;
+    font-weight: normal;
+    padding-bottom: 8px;
+}
+body div.main-content article div.panel p{
+    color: #4b4b4b;
+    font-size: 16px;
+    font-weight: normal;
+    text-indent: 15px;
+}
+
+/* Body aside */
+body div.main-content aside{
+    width: 25%;
+    background-color: #EAEBEB;
+    padding: 20px;
+    float: left;
+    height: calc(100% - 79px);
+    overflow-y: auto;
+}
+body div.main-content aside div.atividades-topo h2{
+    color: #5f5f5f;
+    font-size: 20px;
+    font-weight: normal;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}   
+body div.main-content aside div.atividades-registro{
+    padding: 15px 20px;
+    border-left: 1px solid #BBBBBB;
+}
+body div.main-content aside div.atividades-registro div.circle{
+    width: 18px;
+    height: 18px;
+    background-color: #EAEBEB;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    position: relative;
+    left: -29px;
+    top: -15px;
+}
+body div.main-content aside div.atividades-registro h2{
+    color: #777777;
+    font-size: 19px;
+    font-weight: normal;
+}
+body div.main-content aside div.atividades-registro p{
+    color: #B2B2B2;
+    font-size: 15px;
+}
+
+
+@media screen and (max-width: 1000px){
+    body div.main-content{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    body div.main-content article{width: 100%;}
+    body div.main-content article div.panel{width: 100% !important; margin-left: 0 !important;}
+    body div.main-content aside{display: none;}
+    body div.sidebar{
+        display: none;
+        position: relative;
+        z-index: 1;
+    }
+}
